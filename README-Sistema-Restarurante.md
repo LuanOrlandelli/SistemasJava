@@ -6,7 +6,7 @@ Este projeto é um sistema simples para gerenciamento de um restaurante, permiti
 ---
 
 ## 📜 Sumário
-- [🎯 Utilidade](#-aplicabilidade-no-dia-a-dia)
+- [🎯 Utilidade](#-utilidade)
 - [💡 Funcionalidades](#-funcionalidades)
 - [⚙️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [🚀 Como Usar](#-como-usar)
