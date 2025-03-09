@@ -5,6 +5,7 @@ Este projeto é um sistema de biblioteca desenvolvido em Java para gerenciar liv
 
 ## 📑 Sumário
 - [📖 Introdução](#-introdução)
+- [🏆 Utilidade do Sistema](#-utilidade-do-sistema)
 - [🚀 Funcionalidades](#-funcionalidades)
 - [🛠️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [⚙️ Instalação](#-instalação)
@@ -12,6 +13,16 @@ Este projeto é um sistema de biblioteca desenvolvido em Java para gerenciar liv
 - [🧪 Testes](#-testes)
 - [👨‍💻 Contribuidores](#-contribuidores)
 - [📜 Licença](#-licença)
+
+## 🏆 Utilidade do Sistema
+
+O **Sistema de Biblioteca em Java** foi desenvolvido para auxiliar no gerenciamento de bibliotecas, permitindo que administradores possam:
+- Cadastrar e remover livros do acervo;
+- Registrar novos membros da biblioteca;
+- Controlar empréstimos e devoluções de livros;
+- Armazenar e recuperar os dados do sistema a partir de arquivos.
+
+Com esse sistema, é possível garantir um controle eficiente do fluxo de livros emprestados e evitar perdas ou desorganização no acervo. Além disso, sua implementação em **Java** permite fácil manutenção e escalabilidade para futuras melhorias.
 
 ## 🚀 Funcionalidades
 - 📚 **Gerenciamento de Livros**
