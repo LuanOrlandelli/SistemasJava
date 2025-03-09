@@ -38,22 +38,27 @@ Este projeto é um sistema de biblioteca desenvolvido em Java para gerenciar liv
 
 ### 📚 Adicionar livros à biblioteca
 ```java
-biblioteca.adicionarLivro(new Livro("Livro Exemplo", "Autor Exemplo", "123456"));```
+biblioteca.adicionarLivro(new Livro("Livro Exemplo", "Autor Exemplo", "123456"));
+```
 
 ### 👤 Registrar membro
 ```java
-biblioteca.registrarMembro(new Membro("João", 1, "joao@email.com"));```
+biblioteca.registrarMembro(new Membro("João", 1, "joao@email.com"));
+```
 
 ### 📄 Realizar um empréstimo
 ```java
-biblioteca.registrarEmprestimo(livro, membro```
+biblioteca.registrarEmprestimo(livro, membro
+```
 
 ### 🔄 Realizar uma devolução
 ```java
-biblioteca.devolverLivro(emprestimo);```
+biblioteca.devolverLivro(emprestimo);
+```
 
 ### 💾 Salvar e carregar os dados
 ```java
 biblioteca.salvarDadosEmArquivo("dados.txt");
-biblioteca.carregarDadosDeArquivo("dados.txt");```
+biblioteca.carregarDadosDeArquivo("dados.txt");
+```
 
