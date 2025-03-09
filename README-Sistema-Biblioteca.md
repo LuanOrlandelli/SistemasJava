@@ -8,11 +8,8 @@ Este projeto é um sistema de biblioteca desenvolvido em Java para gerenciar liv
 - [🏆 Utilidade do Sistema](#-utilidade-do-sistema)
 - [🚀 Funcionalidades](#-funcionalidades)
 - [🛠️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [⚙️ Instalação](#-instalação)
 - [▶️ Como Usar](#️-como-usar)
 - [🧪 Testes](#-testes)
-- [👨‍💻 Contribuidores](#-contribuidores)
-- [📜 Licença](#-licença)
 
 ## 🏆 Utilidade do Sistema
 
