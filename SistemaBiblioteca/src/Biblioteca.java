@@ -1,0 +1,89 @@
+import java.io.*;
+import java.util.*;
+
+public class Biblioteca {
+    private List<Livro> livros = new ArrayList<>();
+    private List<Membro> membros = new ArrayList<>();
+    private List<Emprestimo> emprestimos = new ArrayList<>();
+
+    public List<Livro> getLivros() {
+        return livros;
+    }
+
+    public List<Membro> getMembros() {
+        return membros;
+    }
+
+    public List<Emprestimo> getEmprestimos() {
+        return emprestimos;
+    }
+
+    public void adicionarLivro(Livro livro) {
+        if (!livros.contains(livro)) {
+            livros.add(livro);
+            System.out.println("Livro adicionado: " + livro);
+        } else {
+            System.out.println("Erro: Livro já existe na biblioteca!");
+        }
+    }
+
+    public void removerLivro(Livro livro) {
+        for (Emprestimo e : emprestimos) {
+            if (e.getLivro().equals(livro)) {
+                System.out.println("Erro: Não é possível remover um livro emprestado!");
+                return;
+            }
+        }
+        livros.remove(livro);
+        System.out.println("Livro removido: " + livro);
+    }
+
+    public void registrarMembro(Membro membro) {
+        membros.add(membro);
+        System.out.println("Membro registrado: " + membro);
+    }
+
+    public void registrarEmprestimo(Livro livro, Membro membro) {
+        for (Emprestimo e : emprestimos) {
+            if (e.getLivro().equals(livro)) {
+                System.out.println("Erro: Livro já está emprestado!");
+                return;
+            }
+        }
+        Emprestimo emprestimo = new Emprestimo(livro, membro, new Date());
+        emprestimos.add(emprestimo);
+        System.out.println("Emprestimo registrado: " + emprestimo);
+    }
+
+    public void devolverLivro(Emprestimo emprestimo) {
+        if (emprestimos.contains(emprestimo)) {
+            emprestimos.remove(emprestimo);
+            System.out.println("Livro devolvido: " + emprestimo);
+        } else {
+            System.out.println("Erro: Esse empréstimo não existe!");
+        }
+    }
+
+    public void salvarDadosEmArquivo(String nomeArquivo) throws IOException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
+            for (Livro livro : livros) {
+                writer.write("Livro:" + livro + "\n");
+            }
+            for (Membro membro : membros) {
+                writer.write("Membro:" + membro + "\n");
+            }
+            for (Emprestimo emprestimo : emprestimos) {
+                writer.write("Emprestimo:" + emprestimo + "\n");
+            }
+        }
+    }
+
+    public void carregarDadosDeArquivo(String nomeArquivo) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(nomeArquivo))) {
+            String linha;
+            while ((linha = reader.readLine()) != null) {
+                System.out.println(linha);
+            }
+        }
+    }
+}
